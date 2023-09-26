@@ -25,7 +25,7 @@ $(document).ready(function(){
             type : 'POST',
 
             // url
-            url : "/predict",
+            url : api_url,
 
             //  JSON data
             data : JSON.stringify(input_data),
@@ -129,7 +129,7 @@ $(document).ready(function(){
 
     //  if SAVE button is clicked, hit a post request on the API
 
-    $('save_button').click(function(){
+    $('#save_button').click(function(){
 
         console.log('save button is clicked')
 
@@ -138,8 +138,8 @@ $(document).ready(function(){
 
         //  ajax call
         $.ajax({
-            type : '',
-            url : '',
+            type : 'POST',
+            url : '/save',
             data : JSON.stringify(input_data),
             dataType : 'json',
             contentType : 'application/json',
